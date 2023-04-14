@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ButtonActivity"
+    android:padding="15dp">
+<!--    button继承自textView， 所有textView能用的button也可以-->
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/button_1"
+        android:text="按钮"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:background="#FA17C9"
+        />
+<!--    添加drawable和点击事件-->
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/button_2"
+        android:text="按钮"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:background="@drawable/bg_btn2"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/button_1"
+        />
+<!--点击事件-->
+    <Button
+        android:id="@+id/button_3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button_2"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/selector_orange"
+        android:text="touch"
+        android:onClick="showToast"
+        android:textColor="#ff0212" />
+
+
+</RelativeLayout>
