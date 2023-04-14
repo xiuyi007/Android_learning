@@ -1,2 +1,2 @@
 # Android_learning
-record my learning progress in Android
+record my learning progress in Android, just some basic using.
