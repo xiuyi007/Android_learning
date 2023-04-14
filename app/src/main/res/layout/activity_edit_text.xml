@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditTextActivity"
+    android:padding="15dp">
+<!--    数字输入框-->
+    <EditText
+        android:layout_marginTop="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/et_1"
+        android:textSize="16sp"
+        android:textColor="#ffad33"
+        android:hint="用户名"
+        android:inputType="number"
+        android:background="@drawable/bg_et_1"
+        android:paddingLeft="15dp"
+        android:drawableLeft="@drawable/search"
+        android:drawablePadding="5dp"
+        android:maxLines="1"/>
+<!--    密文密码-->
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/et_2"
+        android:textSize="16sp"
+        android:textColor="#ffad33"
+        android:layout_below="@id/et_1"
+        android:layout_marginTop="15dp"
+        android:hint="密码"
+        android:inputType="textPassword"
+        android:background="@drawable/bg_et_1"
+        android:paddingLeft="15dp"
+        android:drawableLeft="@drawable/shop"
+        android:drawablePadding="5dp"
+        android:maxLines="1"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/btn_login"
+        android:layout_below="@id/et_2"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/bg_btn2"
+        android:text="login"
+        android:textSize="20sp" />
+
+</RelativeLayout>

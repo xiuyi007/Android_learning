@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RadioButtonActivity">
+
+    <RadioGroup
+        android:orientation="vertical"
+        android:id="@+id/radio_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+<!--        checked默认选中的话要加id，否则就失效了-->
+        <RadioButton
+            android:id="@+id/rd_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="man"
+            android:textSize="18sp"
+            android:textColor="#ff6600"
+            android:checked="true"/>
+        <RadioButton
+            android:id="@+id/rb_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="women"
+            android:textSize="18sp"
+            android:textColor="#ff6600" />
+    </RadioGroup>
+
+<!--    自定义按钮样式-->
+    <RadioGroup
+        android:orientation="horizontal"
+        android:id="@+id/radio_group_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/radio_group"
+        android:layout_marginTop="40dp">
+        <RadioButton
+            android:button="@null"
+            android:id="@+id/rb_3"
+            android:layout_width="60dp"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="man"
+            android:background="@drawable/selector_orange_radiobutton"
+            android:textSize="18sp"
+            android:textColor="#ffffff"
+            android:checked="true"/>
+        <RadioButton
+            android:button="@null"
+            android:id="@+id/rb_4"
+            android:background="@drawable/selector_orange_radiobutton"
+            android:layout_width="60dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="15dp"
+            android:text="women"
+            android:textSize="18sp"
+            android:textColor="#000000" />
+    </RadioGroup>
+
+
+
+</RelativeLayout>
