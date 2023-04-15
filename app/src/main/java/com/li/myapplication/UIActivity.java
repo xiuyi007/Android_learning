@@ -19,6 +19,7 @@ public class UIActivity extends AppCompatActivity {
     private Button btn_recycleView;
     private Button btn_webView;
     private Button btn_toast;
+    private Button btn_dialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,6 +64,8 @@ public class UIActivity extends AppCompatActivity {
         setListeners(btn_webView);
         btn_toast= findViewById(R.id.btn_toast);
         setListeners(btn_toast);
+        btn_dialog= findViewById(R.id.btn_dialog);
+        setListeners(btn_dialog);
 
     }
     private void setListeners(View view) {
@@ -97,6 +100,9 @@ public class UIActivity extends AppCompatActivity {
                     break;
                 case R.id.btn_toast:
                     intent = new Intent(UIActivity.this, ToastActivity.class);
+                    break;
+                case R.id.btn_dialog:
+                    intent = new Intent(UIActivity.this, DialogActivity.class);
                     break;
             }
             startActivity(intent);
