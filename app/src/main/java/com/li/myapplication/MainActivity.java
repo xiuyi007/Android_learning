@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.webkit.WebView;
 import android.widget.Button;
 import android.widget.ImageView;
 
@@ -21,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
     private Button btn_checkbox;
     private Button btn_imageview;
     private Button btn_recycleView;
+    private Button btn_webView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -60,6 +62,8 @@ public class MainActivity extends AppCompatActivity {
         setListeners(btn_imageview);
         btn_recycleView = findViewById(R.id.goto_rv);
         setListeners(btn_recycleView);
+        btn_webView = findViewById(R.id.btn_webview);
+        setListeners(btn_webView);
 
     }
     private void setListeners(View view) {
@@ -88,7 +92,8 @@ public class MainActivity extends AppCompatActivity {
                     break;
                 case R.id.goto_rv:
                     intent = new Intent(MainActivity.this, RecycleViewActivity.class);
-
+                case R.id.btn_webview:
+                    intent = new Intent(MainActivity.this, WebViewActivity.class);
             }
             startActivity(intent);
         }

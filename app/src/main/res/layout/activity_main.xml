@@ -236,5 +236,10 @@
         android:layout_height="wrap_content"
         android:id="@+id/goto_rv"
         android:text="RecycleView" />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_webview"
+        android:text="WEBVIEW" />
 
 </LinearLayout>

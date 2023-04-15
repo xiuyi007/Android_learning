@@ -15,35 +15,42 @@
         android:theme="@style/Theme.MyApplication"
         tools:targetApi="31">
         <activity
-            android:name="com.li.myapplication.RecycleView.StaggeredGridRecycleViewActivity"
+            android:name=".WebViewActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name="com.li.myapplication.RecycleView.GridRecycleActivity"
+            android:name=".RecycleView.StaggeredGridRecycleViewActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name="com.li.myapplication.RecycleView.HorRecycleViewActivity"
+            android:name=".RecycleView.GridRecycleActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name="com.li.myapplication.RecycleView.LinearRecycleViewActivity"
+            android:name=".RecycleView.HorRecycleViewActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name="com.li.myapplication.RecycleView.RecycleViewActivity"
+            android:name=".RecycleView.LinearRecycleViewActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".RecycleView.RecycleViewActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
