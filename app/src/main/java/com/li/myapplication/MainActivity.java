@@ -23,6 +23,8 @@ public class MainActivity extends AppCompatActivity {
     private Button btn_imageview;
     private Button btn_recycleView;
     private Button btn_webView;
+    private Button btn_toast;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -64,6 +66,8 @@ public class MainActivity extends AppCompatActivity {
         setListeners(btn_recycleView);
         btn_webView = findViewById(R.id.btn_webview);
         setListeners(btn_webView);
+        btn_toast= findViewById(R.id.btn_toast);
+        setListeners(btn_toast);
 
     }
     private void setListeners(View view) {
@@ -92,8 +96,13 @@ public class MainActivity extends AppCompatActivity {
                     break;
                 case R.id.goto_rv:
                     intent = new Intent(MainActivity.this, RecycleViewActivity.class);
+                    break;
                 case R.id.btn_webview:
                     intent = new Intent(MainActivity.this, WebViewActivity.class);
+                    break;
+                case R.id.btn_toast:
+                    intent = new Intent(MainActivity.this, ToastActivity.class);
+                    break;
             }
             startActivity(intent);
         }
