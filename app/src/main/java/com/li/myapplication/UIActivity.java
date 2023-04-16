@@ -20,6 +20,7 @@ public class UIActivity extends AppCompatActivity {
     private Button btn_webView;
     private Button btn_toast;
     private Button btn_dialog;
+    private Button btn_progressbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,6 +67,8 @@ public class UIActivity extends AppCompatActivity {
         setListeners(btn_toast);
         btn_dialog= findViewById(R.id.btn_dialog);
         setListeners(btn_dialog);
+        btn_progressbar = findViewById(R.id.btn_progressbar);
+        setListeners(btn_progressbar);
 
     }
     private void setListeners(View view) {
@@ -103,6 +106,9 @@ public class UIActivity extends AppCompatActivity {
                     break;
                 case R.id.btn_dialog:
                     intent = new Intent(UIActivity.this, DialogActivity.class);
+                    break;
+                case R.id.btn_progressbar:
+                    intent = new Intent(UIActivity.this, ProgressBarActivity.class);
                     break;
             }
             startActivity(intent);
