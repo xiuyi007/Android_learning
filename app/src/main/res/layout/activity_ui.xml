@@ -262,4 +262,9 @@
         android:layout_height="wrap_content"
         android:id="@+id/btn_custom_dialog"
         android:text="CUSTOMDIALOG" />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_popup"
+        android:text="POPUPWINDOW" />
 </LinearLayout>
