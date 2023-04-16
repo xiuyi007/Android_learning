@@ -21,6 +21,7 @@ public class UIActivity extends AppCompatActivity {
     private Button btn_toast;
     private Button btn_dialog;
     private Button btn_progressbar;
+    private Button btn_custom_dialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -69,7 +70,8 @@ public class UIActivity extends AppCompatActivity {
         setListeners(btn_dialog);
         btn_progressbar = findViewById(R.id.btn_progressbar);
         setListeners(btn_progressbar);
-
+        btn_custom_dialog = findViewById(R.id.btn_custom_dialog);
+        setListeners(btn_custom_dialog);
     }
     private void setListeners(View view) {
         OnClick onClick = new OnClick();
@@ -109,6 +111,9 @@ public class UIActivity extends AppCompatActivity {
                     break;
                 case R.id.btn_progressbar:
                     intent = new Intent(UIActivity.this, ProgressBarActivity.class);
+                    break;
+                case R.id.btn_custom_dialog:
+                    intent = new Intent(UIActivity.this, CustomDialogActivity.class);
                     break;
             }
             startActivity(intent);
