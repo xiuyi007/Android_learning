@@ -22,6 +22,7 @@
                 android:value="" />
         </activity>
         <activity
+            android:taskAffinity="myStack"
             android:label="B"
             android:name=".jump.BActivity"
             android:exported="false" >
@@ -31,7 +32,14 @@
                     <category android:name="android.intent.category.DEFAULT" />
                 </intent-filter>
         </activity>
+<!--        设置了taskAffinity后，这个activity就不再属于默认的任务栈了，默认是包名，未指定的都在这个栈里面-->
+<!--        standard, 不复用，想要就创建-->
+<!--        singleTop, 就是如果要启动activity，而栈顶就是这个activity，那么就直接使用这个activity，调用它的onNewIntent方法，而不是oncreate-->
+<!--        singleTask, 想启动的activity如果在栈中，那么清除上面的所有activity，然后启动已有的activity-->
+<!--        singleInstance, 所有栈中只要有，就复用，很少用-->
         <activity
+            android:taskAffinity="myStack"
+            android:launchMode="singleTask"
             android:label="A"
             android:name=".jump.AActivity"
             android:exported="false" >
