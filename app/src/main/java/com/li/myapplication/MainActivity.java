@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
                     intent = new Intent(getApplicationContext(), UIActivity.class);
                     break;
                 case R.id.btn_learn:
-                    intent = new Intent(getApplicationContext(), LifeCycleActivity.class);
+                    intent = new Intent(getApplicationContext(), LearningActivity.class);
                     break;
             }
             startActivity(intent);
