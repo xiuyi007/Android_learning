@@ -18,4 +18,10 @@
         android:id="@+id/btn_jump"
         android:text="JUMP" />
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_frag"
+        android:text="Fragment" />
+
 </LinearLayout>
