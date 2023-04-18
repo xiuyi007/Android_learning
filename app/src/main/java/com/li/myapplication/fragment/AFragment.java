@@ -1,5 +1,6 @@
 package com.li.myapplication.fragment;
 
+import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
 import android.util.Log;
@@ -12,6 +13,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentActivity;
 
 import com.li.myapplication.R;
 
@@ -19,8 +21,15 @@ public class AFragment extends Fragment {
     private BFragment bFragment;
     private Button mBtnChange;
     private Button mBtnReset;
+    private Button mBtnMessage;
     private TextView mTvTitle;
+    private onMessageClick listener;
 
+
+    public interface onMessageClick
+    {
+        void onClick(String s);
+    }
     //给AFragment传递参数
     //不要用构造函数传参，没用。Fragment的一些机制会让你这个传参无效
     public static AFragment getNewInstance(String s) {
@@ -30,6 +39,20 @@ public class AFragment extends Fragment {
         aFragment.setArguments(bundle);
         return aFragment;
     }
+
+    @Override
+    public void onAttach(@NonNull Context context) {
+        super.onAttach(context);
+        //与activity绑定的时候做些事情
+        try {
+            listener = (onMessageClick) context;
+        }catch (ClassCastException e) {
+            throw new ClassCastException("Activity must implement onMessageClick interface");
+        }
+
+
+    }
+
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -60,6 +83,17 @@ public class AFragment extends Fragment {
         mTvTitle = view.findViewById(R.id.tv_title);
         if (getArguments() != null)
             mTvTitle.setText(getArguments().getString("title"));
+        mBtnMessage = view.findViewById(R.id.btn_message);
+        mBtnMessage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //不推荐
+/*                ContainerActivity activity = (ContainerActivity) getActivity();
+                activity.setData("你好");*/
+                //推荐
+                listener.onClick("你好");
+            }
+        });
         mBtnChange = view.findViewById(R.id.btn_change);
         mBtnReset = view.findViewById(R.id.btn_reset);
         mBtnReset.setOnClickListener(new View.OnClickListener() {
@@ -89,11 +123,7 @@ public class AFragment extends Fragment {
         });
     }
 
-    @Override
-    public void onAttach(@NonNull Context context) {
-        super.onAttach(context);
-        //与activity绑定的时候做些事情
-    }
+
 
     @Override
     public void onDetach() {
