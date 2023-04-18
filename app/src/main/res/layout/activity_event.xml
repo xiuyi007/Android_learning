@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".EventActivity">
+    tools:context=".EventActivity"
+    android:orientation="vertical">
 
     <Button
         android:layout_width="match_parent"
@@ -12,5 +13,11 @@
         android:id="@+id/btn_event"
         android:text="Click me"
         android:onClick="show" />
+
+    <com.li.myapplication.widget.MyButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_my"
+        android:text="MYBUTTON" />
 
 </LinearLayout>
