@@ -15,6 +15,13 @@
         android:theme="@style/Theme.MyApplication"
         tools:targetApi="31">
         <activity
+            android:name=".EventActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".fragment.ContainerActivity"
             android:exported="false">
             <meta-data
@@ -47,7 +54,7 @@
         <activity
             android:name=".jump.AActivity"
             android:exported="false"
-            android:label="A"></activity>
+            android:label="A" />
         <activity
             android:name=".LifeCycleActivity"
             android:exported="false">

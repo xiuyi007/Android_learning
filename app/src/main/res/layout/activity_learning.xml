@@ -24,4 +24,10 @@
         android:id="@+id/btn_frag"
         android:text="Fragment" />
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_evt"
+        android:text="EVENT" />
+
 </LinearLayout>
