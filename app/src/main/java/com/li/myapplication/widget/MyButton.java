@@ -25,15 +25,22 @@ public class MyButton extends AppCompatButton {
         super(context, attrs, defStyleAttr);
     }
 
+
+    //触摸事件，都是从这个方法开始往下分发
+    @Override
+    public boolean dispatchTouchEvent(MotionEvent event) {
+        Log.d("MyButton", "--------dispatchTouchEvent");
+        return super.dispatchTouchEvent(event);
+    }
+
     @Override
     public boolean onTouchEvent(MotionEvent event) {
-        super.onTouchEvent(event);
         switch (event.getAction())
         {
             case MotionEvent.ACTION_DOWN:
-                Log.d("MyButton", "--OnTouch");
+                Log.d("MyButton", "--OnTouch_Callback--------");
                 break;
         }
-        return false; //return true,则不会向内传播，否则向内传播，比如activity也会触发touch事件回调
+        return super.onTouchEvent(event); //return true,则不会向内传播，否则向内传播，比如activity也会触发touch事件回调
     }
 }

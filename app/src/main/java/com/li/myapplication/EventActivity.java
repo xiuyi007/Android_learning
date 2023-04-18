@@ -16,6 +16,8 @@ import com.li.myapplication.widget.MyButton;
 import util.ToastUtil;
 
 //设置多个监听，只有最后一个设置的会生效，在layout中设置的是最先监听的，相当于优先级最低
+//dispatchTouchEvent-->touchListener--->onTouchEvent---->ClickEvent
+// dispatch来派发，然后看listener是否return true，决定touchEvent，根据touchEvent产生相应的ClickEvent等等。
 public class EventActivity extends AppCompatActivity implements View.OnClickListener{
     //xml onclick方式，背后其实就是java写的onclick方法。
     public void show(View v)
@@ -41,11 +43,17 @@ public class EventActivity extends AppCompatActivity implements View.OnClickList
                 switch (event.getAction())
                 {
                     case MotionEvent.ACTION_DOWN:
-                        Log.d("Listener", "---onTouch-----");
+                        Log.d("Listener", "---onTouchListener-----");
                         break;
                 }
                 //监听器的优先级高于回调，也就是高于控件本身的onTouchEvent;
                 return false;
+            }
+        });
+        btnMy.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.d("Listener", "------onClickListener------");
             }
         });
         //内部类方式
