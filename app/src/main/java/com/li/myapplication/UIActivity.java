@@ -23,6 +23,7 @@ public class UIActivity extends AppCompatActivity {
     private Button btn_progressbar;
     private Button btn_custom_dialog;
     private Button btn_popup;
+    private Button btn_anim;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -75,6 +76,8 @@ public class UIActivity extends AppCompatActivity {
         setListeners(btn_custom_dialog);
         btn_popup = findViewById(R.id.btn_popup);
         setListeners(btn_popup);
+        btn_anim = findViewById(R.id.btn_anim);
+        setListeners(btn_anim);
     }
     private void setListeners(View view) {
         OnClick onClick = new OnClick();
@@ -120,6 +123,9 @@ public class UIActivity extends AppCompatActivity {
                     break;
                 case R.id.btn_popup:
                     intent = new Intent(UIActivity.this, PopupWindowActivity.class);
+                    break;
+                case R.id.btn_anim:
+                    intent = new Intent(UIActivity.this, ObjectAnimActivity.class);
                     break;
 
             }
