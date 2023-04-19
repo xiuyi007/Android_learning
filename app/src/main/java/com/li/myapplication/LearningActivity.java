@@ -16,6 +16,7 @@ public class LearningActivity extends AppCompatActivity {
     private Button mBtnJump;
     private Button mBtnFrag;
     private Button mBtnEvent;
+    private Button mBtnHandler;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,10 +25,12 @@ public class LearningActivity extends AppCompatActivity {
         mBtnJump = findViewById(R.id.btn_jump);
         mBtnFrag= findViewById(R.id.btn_frag);
         mBtnEvent= findViewById(R.id.btn_evt);
+        mBtnHandler= findViewById(R.id.btn_handler);
         mBtnLife.setOnClickListener(new ClickListener());
         mBtnJump.setOnClickListener(new ClickListener());
         mBtnFrag.setOnClickListener(new ClickListener());
         mBtnEvent.setOnClickListener(new ClickListener());
+        mBtnHandler.setOnClickListener(new ClickListener());
     }
 
     class ClickListener implements View.OnClickListener {
@@ -48,6 +51,9 @@ public class LearningActivity extends AppCompatActivity {
                     break;
                 case R.id.btn_evt:
                     intent = new Intent(LearningActivity.this, EventActivity.class);
+                    break;
+                case R.id.btn_handler:
+                    intent = new Intent(LearningActivity.this, HandlerActivity.class);
                     break;
             }
             startActivity(intent);
