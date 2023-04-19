@@ -7,8 +7,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.li.myapplication.datastorage.DataStorageActivity;
+
 public class MainActivity extends AppCompatActivity {
-    private Button btn_UI, btn_special;
+    private Button btn_UI, btn_special, btn_storage;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -17,6 +19,8 @@ public class MainActivity extends AppCompatActivity {
         btn_UI.setOnClickListener(new ClickListener());
         btn_special = findViewById(R.id.btn_learn);
         btn_special.setOnClickListener(new ClickListener());
+        btn_storage = findViewById(R.id.btn_storage);
+        btn_storage.setOnClickListener(new ClickListener());
 
     }
     class ClickListener implements View.OnClickListener
@@ -32,6 +36,9 @@ public class MainActivity extends AppCompatActivity {
                     break;
                 case R.id.btn_learn:
                     intent = new Intent(getApplicationContext(), LearningActivity.class);
+                    break;
+                case R.id.btn_storage:
+                    intent = new Intent(getApplicationContext(), DataStorageActivity.class);
                     break;
             }
             startActivity(intent);
