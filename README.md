@@ -33,3 +33,7 @@ Android存储
    1. 这个文件要去手机里找，或者模拟器的话去Device Manager里面找到文件存储，然后找这个路径，是可以找到这个存储文件的
    2. ![img.png](img.png)
    3. ![img_1.png](img_1.png)
+
+#### File内部存储
+
+存储位置： /data/data/<applicationId>/files

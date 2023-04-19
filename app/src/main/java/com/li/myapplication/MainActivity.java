@@ -1,7 +1,9 @@
 package com.li.myapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
 
+import android.Manifest;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -22,6 +24,8 @@ public class MainActivity extends AppCompatActivity {
         btn_storage = findViewById(R.id.btn_storage);
         btn_storage.setOnClickListener(new ClickListener());
 
+        //申请权限，简单写法
+        ActivityCompat.requestPermissions(this, new String[] {Manifest.permission.WRITE_EXTERNAL_STORAGE}, 1);
     }
     class ClickListener implements View.OnClickListener
     {

@@ -4,12 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".datastorage.DataStorageActivity">
+    tools:context=".datastorage.DataStorageActivity"
+    android:orientation="vertical">
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/btn_sharedPreferences"
         android:text="SharedPreferences"
+        android:textAllCaps="false" />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_file"
+        android:text="File"
         android:textAllCaps="false" />
 </LinearLayout>
